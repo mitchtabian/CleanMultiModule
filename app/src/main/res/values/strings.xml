@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CleanMultiModule</string>
+    <string name="screen_home">Home</string>
+    <string name="screen_account">Account</string>
+</resources>
