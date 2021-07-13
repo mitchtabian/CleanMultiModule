@@ -35,8 +35,14 @@ fun Navigation(){
                     val navBackStackEntry by navController.currentBackStackEntryAsState()
                     val currentDestination = navBackStackEntry?.destination
                     destinations.forEach { screen ->
+                        val bottomNavItem = screen.getBottomNavItem()
                         BottomNavigationItem(
-                            icon = { Icon(Icons.Filled.Favorite, contentDescription = null) },
+                            icon = {
+                                Icon(
+                                    bottomNavItem.icon,
+                                    contentDescription = stringResource(id = bottomNavItem.contentDescription)
+                                )
+                            },
                             label = { Text(stringResource(screen.resourceId)) },
                             selected = currentDestination?.hierarchy?.any { it.route == screen.route } == true,
                             onClick = {

@@ -5,7 +5,7 @@ import com.codingwithmitch.cleanmultimodule.R
 
 sealed class Screen(
     val route: String,
-    @StringRes val resourceId: Int
+    @StringRes val resourceId: Int,
 ){
     object Home: Screen("home", R.string.screen_home)
 
